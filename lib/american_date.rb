@@ -1,6 +1,6 @@
 require 'date'
 
-if RUBY_VERSION >= '1.9'
+if RUBY_VERSION >= '1.9' && I18n.default_locale == :en
   # Modify parsing methods to handle american date format correctly.
   class << Date
     # American date format detected by the library.
@@ -17,7 +17,7 @@ if RUBY_VERSION >= '1.9'
       _parse_without_american_date(convert_american_to_iso(string), comp)
     end
 
-    if RUBY_VERSION >= '1.9.3'
+    if RUBY_VERSION >= '1.9.3' && I18n.default_locale == :en
       # Alias for stdlib Date.parse
       alias parse_without_american_date parse
 
@@ -46,7 +46,7 @@ if RUBY_VERSION >= '1.9'
     end
   end
 
-  if RUBY_VERSION >= '1.9.3'
+  if RUBY_VERSION >= '1.9.3' && I18n.default_locale == :en
     # Modify parsing methods to handle american date format correctly.
     class << DateTime
       # Alias for stdlib Date.parse
