@@ -54,4 +54,5 @@ ruby-american_date uses GitHub Issues for issue tracking:
 Jeremy Evans <code@jeremyevans.net>
 
 == TF changes
-5/6/15 added evaluation of ENV var for I18n to only use when language is 'en'
+05/06/15 added evaluation of ENV var for I18n to only use when language is 'en'
+07/20/17 added 'en_US', 'en_MIL'. removed ruby > 1.9 requirement
